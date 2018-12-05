@@ -3,25 +3,31 @@
 namespace Tomothumb\LaravelpkgHelloworld;
 
 use App\Http\Controllers\Controller;
-use Tomothumb\LaravelpkgHelloworld\Contracts\SampleContracts;
+use Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts;
 
 
 class HelloworldController extends Controller
 {
     public function getHelloworld()
     {
-        return "hello world";
+        return "Hello world";
     }
 
     public function getServiceSample()
     {
-        $service_sample = app()->get('Tomothumb\LaravelpkgHelloworld\Service\SampleContracts');
+        $service_sample = app()->get('Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts');
         return $service_sample->print();
     }
 
-    public function getServiceSampleDI(SampleContracts $service_sample)
+    public function getServiceSampleDI(HelloworldContracts $service_sample)
     {
-        return $service_sample->print();
+        return $service_sample->print().'di';
     }
+
+    public function getServiceSampleFacade()
+    {
+        return \HelloworldFacade::print().'facade';
+    }
+
 
 }

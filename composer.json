@@ -22,7 +22,10 @@
         "laravel": {
             "providers": [
                 "Tomothumb\\LaravelpkgHelloworld\\HelloworldServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "HelloworldFacade": "Tomothumb\\LaravelpkgHelloworld\\Facades\\HelloworldFacade"
+            }
         }
     }
 }

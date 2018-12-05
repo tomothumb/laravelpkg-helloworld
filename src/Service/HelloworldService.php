@@ -2,9 +2,9 @@
 
 namespace Tomothumb\LaravelpkgHelloworld\Service;
 
-use Tomothumb\LaravelpkgHelloworld\Contracts\SampleContracts;
+use Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts;
 
-class SampleService implements SampleContracts
+class HelloworldService implements HelloworldContracts
 {
     private $message;
 

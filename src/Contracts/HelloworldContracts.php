@@ -3,7 +3,7 @@
 namespace Tomothumb\LaravelpkgHelloworld\Contracts;
 
 
-interface SampleContracts
+interface HelloworldContracts
 {
     public function print();
 

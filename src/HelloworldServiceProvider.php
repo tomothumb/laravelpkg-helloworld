@@ -26,7 +26,7 @@ class HelloworldServiceProvider extends ServiceProvider
     {
         include __DIR__ . '/routes.php';
 
-        $this->app->singleton('Tomothumb\LaravelpkgHelloworld\Service\SampleService', function($app){
+        $this->app->singleton('Tomothumb\LaravelpkgHelloworld\Contracts\SampleContracts', function($app){
             return new SampleService("Hello Universe.");
         });
     }

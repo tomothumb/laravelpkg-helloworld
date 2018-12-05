@@ -11,4 +11,10 @@ class HelloworldController extends Controller
     {
         return "Hello world";
     }
+
+    public function getServiceSample()
+    {
+        $service_sample = app()->get('Tomothumb\LaravelpkgHelloworld\Service\SampleService');
+        return $service_sample->print();
+    }
 }

@@ -3,6 +3,7 @@
 namespace Tomothumb\LaravelpkgHelloworld;
 
 use Illuminate\Support\ServiceProvider;
+use Tomothumb\LaravelpkgHelloworld\Service\SampleService;
 
 class HelloworldServiceProvider extends ServiceProvider
 {
@@ -24,5 +25,9 @@ class HelloworldServiceProvider extends ServiceProvider
     public function register()
     {
         include __DIR__ . '/routes.php';
+
+        $this->app->singleton('Tomothumb\LaravelpkgHelloworld\Service\SampleService', function($app){
+            return new SampleService("Hello Universe.");
+        });
     }
 }

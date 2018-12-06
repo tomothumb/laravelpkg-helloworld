@@ -10,3 +10,8 @@ Demo Package for Laravel
 - /helloworld_service_di
 - /helloworld_service_facade
 ```
+
+## Command
+```
+$ php artisan laravelpkg-helloworld:helloworld
+```

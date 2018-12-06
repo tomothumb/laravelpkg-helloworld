@@ -17,6 +17,11 @@ class HelloworldService implements HelloworldContracts
         $this->message = $message;
     }
 
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
     public function print()
     {
         echo $this->message;

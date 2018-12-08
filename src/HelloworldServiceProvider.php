@@ -15,6 +15,40 @@ class HelloworldServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Distribute Config File
+        $this->publishes([
+            __DIR__ . '/Resource/Config/helloworld.php' => config_path('helloworld.php')
+        ], 'config');
+
+        // Route
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
+
+        // Migration
+//        $this->loadMigrationsFrom(__DIR__.'/path/to/migrations');
+//        $this->publishes([
+//            __DIR__.'/../database/migrations/' => database_path('migrations')
+//        ], 'migrations');
+
+
+        // Translation
+        $this->loadTranslationsFrom(__DIR__ . '/Resource/Translation', 'helloworld');
+
+        // Distribute Translation File
+        $this->publishes([
+            __DIR__.'/Resource/Translation' => resource_path('lang/vendor/helloworld'),
+        ],'lang');
+
+        // view
+        $this->loadViewsFrom(__DIR__.'/Resource/View', 'laravelpkg_helloworld');
+
+        $this->publishes([
+            __DIR__.'/Resource/View' => resource_path('views/vendor/laravelpkg_helloworld'),
+        ],'view');
+
+        //Resources
+        $this->publishes([
+            __DIR__.'/Resource/Assets' => public_path('vendor/laravelpkg_helloworld'),
+        ], 'public');
 
     }
 
@@ -25,7 +59,6 @@ class HelloworldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        include __DIR__ . '/routes.php';
 
         // Service
         $this->app->singleton('Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts', function($app){
@@ -39,5 +72,6 @@ class HelloworldServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands('Tomothumb\LaravelpkgHelloworld\Command\HelloworldCommand');
         }
+
     }
 }

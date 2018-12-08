@@ -29,5 +29,10 @@ class HelloworldController extends Controller
         return \HelloworldFacade::print().'facade';
     }
 
+    public function bladeSample(){
+
+        return view('laravelpkg_helloworld::helloworld');
+    }
+
 
 }

@@ -16,7 +16,10 @@
     "autoload": {
         "psr-4": {
             "Tomothumb\\LaravelpkgHelloworld\\": "src/"
-        }
+        },
+        "classmap": [
+            "tests/TestCase.php"
+        ]
     },
     "extra": {
         "laravel": {

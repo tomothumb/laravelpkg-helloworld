@@ -27,5 +27,8 @@
                 "HelloworldFacade": "Tomothumb\\LaravelpkgHelloworld\\Facades\\HelloworldFacade"
             }
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.7"
     }
 }

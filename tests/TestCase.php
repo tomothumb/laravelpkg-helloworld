@@ -14,7 +14,7 @@ class TestCase extends \Orchestra\Testbench\TestCase{
     protected function getApplicationAliases($app)
     {
         return [
-            'HelloworldFacade' => 'Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts'
+            'HelloworldFacade' => 'Tomothumb\LaravelpkgHelloworld\Facades\HelloworldFacade'
         ];
     }
 

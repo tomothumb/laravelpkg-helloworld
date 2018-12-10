@@ -3,13 +3,20 @@
 namespace Tomothumb\LaravelpkgHelloworld\Tests;
 
 use Tests\TestCase;
+use Tomothumb\LaravelpkgHelloworld\Service\HelloworldService;
 
 class HelloworldTest extends TestCase
 {
 
-    public function testSample()
+    public function testSearvice()
     {
-        $this->assertTrue( true);
+        $h = new HelloworldService("Hello");
+        $this->assertSame( "Hello", $h->getMessage() );
+    }
+
+    public function testFacadeDefault()
+    {
+        $this->assertSame( "Hello Universe.", \HelloworldFacade::getMessage() );
     }
 
 }

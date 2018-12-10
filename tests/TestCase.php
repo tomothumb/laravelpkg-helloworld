@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-class TestCase extends \Orchestra\Testbench\TestCase{
-
+class TestCase extends \Orchestra\Testbench\TestCase
+{
     protected function getPackageProviders($app)
     {
         return [
@@ -17,5 +17,4 @@ class TestCase extends \Orchestra\Testbench\TestCase{
             'HelloworldFacade' => 'Tomothumb\LaravelpkgHelloworld\Facades\HelloworldFacade'
         ];
     }
-
 }

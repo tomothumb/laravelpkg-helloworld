@@ -50,5 +50,4 @@ class HelloworldCommand extends Command
         $this->table(["Heading 1", "Heading b"], [["Hello1", $message." World1"], ["Hello2", $message. " World2"]]);
         $this->info("This is output form a sample command of development package.");
     }
-
 }

@@ -36,20 +36,19 @@ class HelloworldServiceProvider extends ServiceProvider
         // Distribute Translation File
         $this->publishes([
             __DIR__.'/Resource/Translation' => resource_path('lang/vendor/helloworld'),
-        ],'lang');
+        ], 'lang');
 
         // view
         $this->loadViewsFrom(__DIR__.'/Resource/View', 'laravelpkg_helloworld');
 
         $this->publishes([
             __DIR__.'/Resource/View' => resource_path('views/vendor/laravelpkg_helloworld'),
-        ],'view');
+        ], 'view');
 
         //Resources
         $this->publishes([
             __DIR__.'/Resource/Assets' => public_path('vendor/laravelpkg_helloworld'),
         ], 'public');
-
     }
 
     /**
@@ -61,7 +60,7 @@ class HelloworldServiceProvider extends ServiceProvider
     {
 
         // Service
-        $this->app->singleton('Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts', function($app){
+        $this->app->singleton('Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts', function ($app) {
             return new HelloworldService("Hello Universe.");
         });
 
@@ -72,6 +71,5 @@ class HelloworldServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands('Tomothumb\LaravelpkgHelloworld\Command\HelloworldCommand');
         }
-
     }
 }

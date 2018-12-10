@@ -13,7 +13,7 @@ before_script:
 
 script:
   # 単体テストとカバレッジ取得を実行
-  - ./vendor/bin/phpunit --coverage-clover tests/clover.xml
+  - ./vendor/bin/phpunit
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -cF php

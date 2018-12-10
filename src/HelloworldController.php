@@ -5,7 +5,6 @@ namespace Tomothumb\LaravelpkgHelloworld;
 use App\Http\Controllers\Controller;
 use Tomothumb\LaravelpkgHelloworld\Contracts\HelloworldContracts;
 
-
 class HelloworldController extends Controller
 {
     public function getHelloworld()
@@ -29,10 +28,8 @@ class HelloworldController extends Controller
         return \HelloworldFacade::print().'facade';
     }
 
-    public function bladeSample(){
-
+    public function bladeSample()
+    {
         return view('laravelpkg_helloworld::helloworld');
     }
-
-
 }

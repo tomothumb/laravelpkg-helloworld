@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/helloworld', 'Tomothumb\LaravelpkgHelloworld\HelloworldController@getHelloworld');
 Route::get('/helloworld_service', 'Tomothumb\LaravelpkgHelloworld\HelloworldController@getServiceSample');
 Route::get('/helloworld_service_di', 'Tomothumb\LaravelpkgHelloworld\HelloworldController@getServiceSampleDI');
